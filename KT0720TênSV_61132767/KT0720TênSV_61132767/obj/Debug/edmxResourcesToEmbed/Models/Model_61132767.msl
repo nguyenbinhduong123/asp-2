@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="KT0720_61132767ModelStoreContainer" CdmEntityContainer="KT0720_61132767Entities1">
+    <EntitySetMapping Name="LOPs">
+      <EntityTypeMapping TypeName="KT0720_61132767Model.LOP">
+        <MappingFragment StoreEntitySet="LOP">
+          <ScalarProperty Name="Malop" ColumnName="Malop" />
+          <ScalarProperty Name="Tenlop" ColumnName="Tenlop" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SINHVIENs">
+      <EntityTypeMapping TypeName="KT0720_61132767Model.SINHVIEN">
+        <MappingFragment StoreEntitySet="SINHVIEN">
+          <ScalarProperty Name="MaSV" ColumnName="MaSV" />
+          <ScalarProperty Name="HoSV" ColumnName="HoSV" />
+          <ScalarProperty Name="TenSV" ColumnName="TenSV" />
+          <ScalarProperty Name="Ngaysinh" ColumnName="Ngaysinh" />
+          <ScalarProperty Name="Gioitinh" ColumnName="Gioitinh" />
+          <ScalarProperty Name="AnhSV" ColumnName="AnhSV" />
+          <ScalarProperty Name="Diachi" ColumnName="Diachi" />
+          <ScalarProperty Name="Malop" ColumnName="Malop" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

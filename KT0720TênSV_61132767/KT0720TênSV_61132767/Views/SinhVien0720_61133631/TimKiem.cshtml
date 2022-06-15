@@ -1,0 +1,97 @@
+﻿@model List<KT0720TênSV_61132767.Models>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    string gtinh = "";
+    int i = 0;
+}
+Nhập mã nhân viên cần tìm
+@using (Html.BeginForm())
+{
+    <input type="text" name="maNV" />
+    <input type="submit" value="Tìm kiếm" />
+    <h3>DANH SÁCH NHÂN VIÊN</h3>
+
+    <p>
+        @Html.ActionLink("Thêm mới", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                STT
+            </th>
+            <th>
+                Mã SV
+            </th>
+            <th>
+                Họ sinh viên
+            </th>
+            <th>
+                Tên sinh viên
+            </th>
+            <th>
+                Giới tính
+            </th>
+            <th>
+                Ngày sinh
+            </th>
+            <th>
+                Ảnh SV
+            </th>
+            <th>
+                Địa chỉ
+            </th>
+            <th>
+                Lớp
+            </th>
+            <th>Xem chi tiết </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @{i++;}
+                    @i
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaSV)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HoSV)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenSV)
+                </td>
+                <td>
+                    @{if (item.Gioitinh == true)
+                        { gtinh = "Nam"; }
+                        else
+                        { gtinh = "Nữ"; }
+                    }
+                    @gtinh
+
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ngaysinh)
+
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AnhSV)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DiaChi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Malop)
+                </td>
+                <td>
+                    @Html.ActionLink("Xem chi tiết", "Details", new { id = item.MaNV })
+                </td>
+            </tr>
+        }
+
+    </table>
+
+}
